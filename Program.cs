@@ -4,8 +4,12 @@ using World.Cup.Simulator.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionString = builder.Configuration.GetConnectionString("ServerConnection");
+string connectionStringUrl = Environment.GetEnvironmentVariable("MYSQL_URL");
+connectionString = string.IsNullOrEmpty(connectionStringUrl) ? connectionString : connectionStringUrl;
+
 builder.Services.AddDbContext<WorldCupContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("ServerConnection")));
+options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -19,7 +23,7 @@ app.UseSwaggerUI();
 app.UseHttpsRedirection();
 
 
-app.MapGet("/teams/{id}",async (WorldCupContext context, Guid id) =>
+app.MapGet("/teams/{id}",async (WorldCupContext context, int id) =>
 {
     var team = await context.Teams.FindAsync(id);
     return Results.Ok(team);
@@ -56,7 +60,7 @@ app.MapPut("/teams/{id}", async (WorldCupContext context, Team team) =>
     return Results.Ok(dbTeam);
 });
 
-app.MapDelete("/teams/{id}", async (WorldCupContext context, Guid id) =>
+app.MapDelete("/teams/{id}", async (WorldCupContext context, int id) =>
 {
     Team dbTeam = await context.Teams.FindAsync(id);
     if (dbTeam == null)

@@ -17,7 +17,11 @@ namespace World.Cup.Simulator
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("ServerConnection"));
+            var connectionString = configuration.GetConnectionString("ServerConnection");
+            string connectionStringUrl = Environment.GetEnvironmentVariable("MYSQL_URL");
+            connectionString = string.IsNullOrEmpty(connectionStringUrl) ? connectionString : connectionStringUrl;
+
+            optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 
         }
 
