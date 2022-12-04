@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <BaseOutputPath>bin</BaseOutputPath>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<RestoreFallbackFolders>clear</RestoreFallbackFolders>
     <invariantGlobalization>true</invariantGlobalization>
   </PropertyGroup>
 

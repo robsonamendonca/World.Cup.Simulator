@@ -1036,8 +1036,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\robson\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\robson\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -1048,9 +1047,6 @@
       "packagesPath": "C:\\Users\\robson\\.nuget\\packages\\",
       "outputPath": "C:\\git\\World.Cup.Simulator\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\robson\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
