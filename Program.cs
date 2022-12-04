@@ -5,11 +5,15 @@ using World.Cup.Simulator.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("ServerConnection");
-string connectionStringUrl = Environment.GetEnvironmentVariable("MYSQL_URL");
+string? connectionStringUrl = Environment.GetEnvironmentVariable("MYSQL_URL");
 connectionString = string.IsNullOrEmpty(connectionStringUrl) ? connectionString : connectionStringUrl;
 
-builder.Services.AddDbContext<WorldCupContext>(options =>
-options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+// Add services to the container.
+builder.Services.AddEntityFrameworkMySql()
+                .AddDbContext<WorldCupContext>(options =>
+                {
+                    options.UseMySql(connectionString,ServerVersion.AutoDetect(connectionString));
+                });
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
