@@ -5,7 +5,7 @@ using World.Cup.Simulator.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("ServerConnection");
-string? connectionStringUrl = Environment.GetEnvironmentVariable("MYSQL_URL");
+string? connectionStringUrl = Environment.GetEnvironmentVariable("SERVER_CONNECTION");
 connectionString = string.IsNullOrEmpty(connectionStringUrl) ? connectionString : connectionStringUrl;
 
 // Add services to the container.
