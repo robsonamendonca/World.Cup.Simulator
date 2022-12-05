@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    container_name: dotnetCore60
+    build: .
+    environment:
+      - DATABASE_URL=server=database;port=5432;userid=postgres;database=posts;password=password
+    ports:
+        - "5005:5000"

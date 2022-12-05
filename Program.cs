@@ -9,16 +9,27 @@ string? connectionStringUrl = Environment.GetEnvironmentVariable("DATABASE_URL")
 connectionString = string.IsNullOrEmpty(connectionStringUrl) ? connectionString : connectionStringUrl;
 
 // Add services to the container.
-builder.Services.AddEntityFrameworkMySql()
-                .AddDbContext<WorldCupContext>(options =>
-                {
-                    options.UseMySql(connectionString,ServerVersion.AutoDetect(connectionString));
-                });
+builder.Services.AddDbContext<WorldCupContext>(options =>
+{
+    options.UseMySql(connectionString,ServerVersion.AutoDetect(connectionString));
+});
+
+//Enable CORS
+builder.Services.AddCors(c =>
+{
+    c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
 var app = builder.Build();
+
+
+//Enable CORS
+app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 app.UseSwagger();
 app.UseSwaggerUI();
