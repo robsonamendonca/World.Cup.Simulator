@@ -32,7 +32,8 @@ Essa é a api do nosso Simulador da Copa do Mundo!
 Essa aplicação foi criada no evento De Ponta a Ponta, um evento prático focado em ensinar como criar aplicações com backend, frontend e banco de dados.
 
 ## Tecnologias :rocket:
-
+#### Front-end
+- [world-cup-simulator](https://github.com/robsonamendonca/world-cup-simulator)
 #### Back-end
 - Dotnet 6 (Minimal API)
 - Entity Framework Core 6
