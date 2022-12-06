@@ -37,6 +37,16 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
+app.MapGet("/api/teams/groups", async (WorldCupContext context) =>
+{
+    var teams = await context.teams.ToListAsync();
+    var groups = teams.GroupBy(p => p.Group)
+        .OrderBy(p => p.Key)
+        .Select(p => p.Select(p => p));
+
+    return Results.Ok(groups);
+});
+
 
 app.MapGet("/teams/{id}",async (WorldCupContext context, int id) =>
 {
