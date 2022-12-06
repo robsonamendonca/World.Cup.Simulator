@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xpbnJRnpnW6YjmScURE18wW/gyH2gqcORJYPRxOD9Xok7uKcTy+0yYrJMkcqqIvTm19LLcSDQwYNMOVBCpaG3Q==",
+  "dgSpecHash": "y2BFY+OTlyA/LKQX1yVVpK0Ku7C5dBHQ/+EbpOAXE16g4AQoOm0I8ysb5Ty5c3aaMulH8ger7on4Muzi0XTV4Q==",
   "success": true,
   "projectFilePath": "C:\\git\\World.Cup.Simulator\\World.Cup.Simulator.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,7 @@
     "C:\\Users\\robson\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\robson\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\robson\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\robson\\.nuget\\packages\\mysqlconnector\\2.1.2\\mysqlconnector.2.1.2.nupkg.sha512",
+    "C:\\Users\\robson\\.nuget\\packages\\mysqlconnector\\2.2.1\\mysqlconnector.2.2.1.nupkg.sha512",
     "C:\\Users\\robson\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\6.0.2\\pomelo.entityframeworkcore.mysql.6.0.2.nupkg.sha512",
     "C:\\Users\\robson\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\robson\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",

@@ -1,6 +1,6 @@
 ﻿namespace World.Cup.Simulator.Models
 {
-    public class Team
+    public class team
     {
         public int Id { get; set; }
 

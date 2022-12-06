@@ -18,14 +18,14 @@ namespace World.Cup.Simulator
                 .Build();
 
             var connectionString = configuration.GetConnectionString("ServerConnection");
-            string connectionStringUrl = Environment.GetEnvironmentVariable("MYSQL_URL");
+            string? connectionStringUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
             connectionString = string.IsNullOrEmpty(connectionStringUrl) ? connectionString : connectionStringUrl;
 
             optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 
         }
 
-        public DbSet<Team> Teams { get; set; }
+        public DbSet<team> teams { get; set; }
 
     }
 }
