@@ -1,7 +1,7 @@
 <h1>World Cup Simulator - API</h1>
 
 <p align="center">
-<image src="https://via.placeholder.com/300x100/0000FF/808080?Text=world-cup-simulator-backend" /></br>
+<image src="https://via.placeholder.com/300x100.png?text=World.Cup.Simulator" /></br>
 <label>+</label>
 </p>
 
